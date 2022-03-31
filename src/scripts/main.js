@@ -42,7 +42,9 @@ const select = () => {
   const selectItem = document.querySelectorAll('.select__item');
 
   mainSelect.forEach(item => {
-    // item.querySelector("")
+    // eslint-disable-next-line no-console
+    // console.log(item);
+
     item.addEventListener('click', function() {
       selectBody.classList.toggle('select__body--active');
     });

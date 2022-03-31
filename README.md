@@ -1,4 +1,6 @@
 # Base layout template with Gulp, SCSS and Stylelint
 1. Create a repo using this template
-1. Replace `<your_account>` and `<repo_name>` with your Github username and the new repo name
-    - [DEMO LINK](https://<your_account>.github.io/<repo_name>/)
+    - [DEMO LINK]
+использовал готовый темплейт шаблон с набором правил для линтера и сборщика проекта , только scss + js
+кнопки KONTAKT не обновляют страницу, присутствует минимальная адаптация под разные девайсы, анимации нет , только transition
+по макету сверстано fullHD екраны дальше на глаз )

@@ -6,6 +6,10 @@
   background: url("../images/bg-top.jpg") center center/cover no-repeat;
   background-attachment: fixed;
 
+  @include onDesktop {
+    height: 80vw;
+  }
+
   @include onLaptop-s {
     height: 100vw;
   }

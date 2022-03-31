@@ -159,7 +159,8 @@ var select = function select() {
   var selectText = document.querySelector('.select__text');
   var selectItem = document.querySelectorAll('.select__item');
   mainSelect.forEach(function (item) {
-    // item.querySelector("")
+    // eslint-disable-next-line no-console
+    // console.log(item);
     item.addEventListener('click', function () {
       selectBody.classList.toggle('select__body--active');
     });
@@ -219,7 +220,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63062" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59165" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

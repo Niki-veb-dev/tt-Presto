@@ -37,23 +37,21 @@ const slider = () => {
 
 const select = () => {
   const mainSelect = document.querySelectorAll('.form__input--select');
-  const selectBody = document.querySelector('.select__body');
-  const selectText = document.querySelector('.select__text');
   const selectItem = document.querySelectorAll('.select__item');
 
   mainSelect.forEach(item => {
-    // eslint-disable-next-line no-console
-    // console.log(item);
-
     item.addEventListener('click', function() {
-      selectBody.classList.toggle('select__body--active');
+      this.querySelector('.select__body').classList
+        .toggle('select__body--active');
     });
   });
 
   selectItem.forEach(item => {
     item.addEventListener('click', function() {
-      selectBody.classList.remove('.select__body--active');
-      selectText.innerText = this.innerText;
+      const selector = this.closest('.form__input--select');
+      const text = selector.querySelector('.select__text');
+
+      text.innerText = this.innerText;
     });
   });
 };

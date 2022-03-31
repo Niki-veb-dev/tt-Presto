@@ -13,7 +13,7 @@
   }
 
   @include onTablet {
-    padding: 20px 33px 15px;
+    padding: 20px 23px 15px;
   }
 
   &__title {
@@ -49,11 +49,13 @@
   &__content {
     display: flex;
     flex-direction: column;
+    align-items: center;
     max-width: 300px;
   }
 
   &__input {
     margin-bottom: 35px;
+    width: 100%;
 
     &--select {
       position: relative;
@@ -86,7 +88,7 @@
 
     @include font-style(
       $font-avenir,
-      $f-size-16,
+      $f-size-18,
       900,
       normal,
       $c-black,
@@ -98,7 +100,7 @@
 
     @include onTablet {
       padding-bottom: 5px;
-      white-space: normal;
+      font-size: $f-size-14;
     }
 
     @include onMobile {
@@ -115,6 +117,8 @@
     width: 132px;
     height: 44px;
 
+    transition: box-shadow 0.2s;
+
     @include font-style(
       $font-avenir,
       $f-size-14,
@@ -128,6 +132,10 @@
       height: 35px;
       font-size: $f-size-12;
       margin-bottom: 15px;
+    }
+
+    &:hover {
+      box-shadow: 0 12px 16px 0 $c-grey-bright, 0 17px 50px 0 $c-grey-bright;
     }
   }
 

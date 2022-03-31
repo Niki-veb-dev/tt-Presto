@@ -149,6 +149,8 @@
     width: 178px;
     height: 44px;
 
+    transition: box-shadow 0.2s;
+
     @include font-style(
       $font-pier__sans-black,
       $f-size-14,
@@ -156,5 +158,9 @@
       normal,
       $c-white,
     );
+
+    &:hover {
+      box-shadow: 0 12px 16px 0 $c-grey-bright, 0 17px 50px 0 $c-grey-bright;
+    }
   }
 }

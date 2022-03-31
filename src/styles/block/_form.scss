@@ -1,0 +1,147 @@
+.form {
+  padding: 56px 83px 48px;
+  background: $c-grey-form;
+  backdrop-filter: blur(12px);
+  border-radius: 15px;
+
+  @include onDesktop {
+    padding: 45px 73px;
+  }
+
+  @include onLaptop-L {
+    padding: 5% 5% 3%;
+  }
+
+  @include onTablet {
+    padding: 20px 33px 15px;
+  }
+
+  &__title {
+    margin-bottom: 42px;
+    text-align: center;
+
+    @include font-style(
+      $font-pier__sans-regular,
+      $f-size-30,
+      400,
+      36px,
+      $c-black,
+    );
+
+    @include onDesktop {
+      margin-bottom: 22px;
+      font-size: $f-size-24;
+    }
+
+    @include onLaptop-L {
+      font-size: $f-size-22;
+    }
+
+    @include onTablet {
+      font-size: $f-size-16;
+    }
+
+    @include onMobile {
+      font-size: $f-size-24;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+  }
+
+  &__input {
+    margin-bottom: 35px;
+
+    &--select {
+      position: relative;
+
+      &::before {
+        content: "\25BE";
+        position: absolute;
+        cursor: pointer;
+        right: 0;
+        font-size: 32px;
+        line-height: 22px;
+      }
+    }
+
+    @include onTablet {
+      margin-bottom: 25px;
+    }
+  }
+
+  &__text {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid $c-black;
+    background-color: transparent;
+    padding-bottom: 25px;
+
+    &::placeholder {
+      color: $c-black;
+    }
+
+    @include font-style(
+      $font-avenir,
+      $f-size-16,
+      900,
+      normal,
+      $c-black,
+    );
+
+    @include onDesktop {
+      padding-bottom: 15px;
+    }
+
+    @include onTablet {
+      padding-bottom: 5px;
+      white-space: normal;
+    }
+
+    @include onMobile {
+      padding-bottom: 15px;
+    }
+  }
+
+  &__button {
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    background-color: $c-blue;
+    border-radius: 5px;
+    border: none;
+    width: 132px;
+    height: 44px;
+
+    @include font-style(
+      $font-avenir,
+      $f-size-14,
+      900,
+      normal,
+      $c-white,
+    );
+
+    @include onTablet {
+      width: 100px;
+      height: 35px;
+      font-size: $f-size-12;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__privacy {
+    @include font-style(
+      $font-avenir,
+      11px,
+      500,
+      normal,
+      $c-grey,
+    );
+
+    @include onTablet {
+      display: none;
+    }
+  }
+}

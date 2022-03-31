@@ -1,0 +1,77 @@
+.ability {
+  position: relative;
+
+  &__bg {
+    position: absolute;
+    left: 5%;
+    right: 5%;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    border-radius: 10px;
+    background-color: $c-blue-transparament;
+  }
+
+  &__content {
+    padding: 132px 0 149px;
+
+    @include onTablet {
+      padding: 70px 0;
+    }
+  }
+
+  &__title {
+    text-align: center;
+    margin-bottom: 92px;
+
+    @include onMobile {
+      margin-bottom: 50px;
+    }
+  }
+
+  &___property {
+    display: flex;
+    justify-content: space-between;
+
+    @include onTablet {
+      flex-wrap: wrap;
+      column-gap: 10%;
+      row-gap: 30px;
+    }
+
+    @include onMobile {
+      flex-direction: column;
+      row-gap: 20px;
+      align-items: center;
+    }
+  }
+
+  &__text {
+    @include font-style(
+      $font-avenir,
+      $f-size-16,
+      600,
+      22px,
+      $c-black,
+    );
+  }
+
+  &__description {
+    width: 187px;
+    display: flex;
+    row-gap: 24px;
+    text-align: center;
+    flex-direction: column;
+
+    @each $icon, $count in $icons {
+      &:nth-child(#{$count}) {
+        &::before {
+          content: "#{$icon}";
+          color: #0376c4;
+          font-family: $font-logo, sans-serif;
+          font-size: 50px;
+        }
+      }
+    }
+  }
+}

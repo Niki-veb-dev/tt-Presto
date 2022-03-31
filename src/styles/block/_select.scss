@@ -1,0 +1,26 @@
+.select {
+  position: relative;
+
+  &__body {
+    z-index: 3;
+    width: 100%;
+    display: flex;
+    padding: 10px;
+    row-gap: 22px;
+    position: absolute;
+    visibility: hidden;
+    border-radius: 5px;
+    flex-direction: column;
+    background-color: $c-white;
+    transition: visibility ease 0.3s;
+
+    &--active {
+      visibility: visible;
+    }
+  }
+
+  &__text,
+  &__item {
+    cursor: pointer;
+  }
+}

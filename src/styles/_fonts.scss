@@ -1,6 +1,66 @@
 @font-face {
-  font-family: "Roboto";
-  src: url("../fonts/Roboto-Regular-webfont.woff") format("woff");
+  font-family: $font-avenir;
+  src: url("../fonts/avenirnextcyr-light.eot");
+  src: url("../fonts/avenirnextcyr-light.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/avenirnextcyr-light.woff2") format("woff2"),
+    url("../fonts/avenirnextcyr-light.woff") format("woff"),
+    url("../fonts/avenirnextcyr-light.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
+}
+
+@font-face {
+  font-family: $font-pier__sans-italic;
+  src: url("../fonts/Pier\ Sans\ Italic\ 400.otf") format("otf"),
+    url("../fonts/Pier\ Sans\ Italic\ 400.ttf") format("ttf"),
+    url("../fonts/Pier\ Sans\ Italic\ 400.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: $font-pier__sans-black;
+  src: url("../fonts/PierSans-Black.otf") format("otf"),
+    url("../fonts/PierSans-Black.ttf") format("ttf"),
+    url("../fonts/PierSans-Black.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: $font-pier__sans-black__italic;
+  src: url("../fonts/PierSans-BlackItalic.otf") format("otf"),
+    url("../fonts/PierSans-BlackItalic.ttf") format("tff"),
+    url("../fonts/PierSans-BlackItalic.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: $font-pier__sans-bold;
+  src: url("../fonts/PierSans-Bold\ 700.otf") format("otf"),
+    url("../fonts/PierSans-Bold\ 700.ttf") format("ttf"),
+    url("../fonts/PierSans-Bold\ 700.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: $font-pier__sans-regular;
+  src: url("../fonts/PierSans-Black.otf") format("otf"),
+    url("../fonts/PierSans-Black.ttf") format("ttf")
+    url("../fonts/PierSans-Black.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: $font-logo;
+  src: url("../fonts/icomoon.eot?e8sc9s");
+  src: url("../fonts/icomoon.eot?e8sc9s#iefix") format("embedded-opentype"),
+    url("../fonts/icomoon.ttf?e8sc9s") format("truetype"),
+    url("../fonts/icomoon.woff?e8sc9s") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
 }

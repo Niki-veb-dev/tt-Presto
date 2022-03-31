@@ -1,0 +1,79 @@
+.technologie {
+
+  &__content {
+    position: relative;
+  }
+
+  &__title {
+    margin-bottom: 31px;
+  }
+
+  &__subtitle {
+    margin-bottom: 43px;
+
+    @include onMobile {
+      margin-bottom: 25px;
+    }
+  }
+
+  &__text {
+    margin-bottom: 110px;
+
+    @include onMobile {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__text,
+  &__property {
+    @include font-style(
+      $font-avenir,
+      $f-size-18,
+      600,
+      25px,
+      $c-black,
+    );
+  }
+
+  &__image {
+    width: 100%;
+  }
+
+  &__img {
+    top: -80px;
+    right: 0;
+    position: absolute;
+
+    @include onMobile {
+      display: none;
+    }
+
+    @include onTablet {
+      width: 50%;
+      right: 0;
+      top: 15%;
+    }
+
+    @include onLaptop-s {
+      top: 5%;
+      width: 50%;
+    }
+  }
+
+  &__property {
+    position: relative;
+    padding-left: 29px;
+    display: block;
+    &:nth-child(n) {
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 10px;
+        width: 10px;
+        height: 2px;
+        background-color: $c-blue;
+      }
+    }
+  }
+}

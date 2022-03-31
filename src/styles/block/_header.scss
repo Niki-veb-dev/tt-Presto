@@ -1,0 +1,234 @@
+.header {
+  position: relative;
+  padding: 45px 0 0;
+  width: 100%;
+  height: 100vh;
+  background: url("../images/bg-top.jpg") center center/cover no-repeat;
+  background-attachment: fixed;
+
+  @include onLaptop-s {
+    height: 100vw;
+  }
+
+  @include onTablet {
+    padding: 25px 0 0;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  @include onMobile {
+    padding: 15px 0 0;
+    height: 100%;
+
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    border-bottom: 1px solid $c-white-transparament;
+    top: 148px;
+    left: 0;
+    right: 0;
+  }
+
+  &__navigation {
+    width: 100%;
+    margin-bottom: 152px;
+
+    @include onDesktop {
+      margin-bottom: 90px;
+    }
+
+    @include onTablet {
+      margin-bottom: 45px;
+    }
+
+    @include onTablet {
+      margin-bottom: 50px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid $c-white-transparament;
+    }
+  }
+
+  &__content {
+    @extend %flex-space-between;
+    column-gap: 25%;
+
+    @include onMobile {
+      flex-direction: column;
+      row-gap: 50px;
+    }
+  }
+
+  &__about {
+    padding-top: 12px;
+    max-width: 647px;
+
+    @include onDesktop {
+      max-width: 500px;
+    }
+
+    @include onLaptop-L {
+      max-width: 40%;
+    }
+
+    @include onMobile {
+      max-width: 100%;
+    }
+  }
+
+  &__numbers {
+    position: relative;
+    margin-bottom: 5px;
+
+    @include font-style(
+      $font-pier__sans-black,
+      $f-size-30,
+      900,
+      normal,
+      $c-white,
+    );
+
+    &::after {
+      position: absolute;
+      content: "/03";
+      top: 3px;
+      font-size: $f-size-14;
+      margin-left: 7px;
+      font-weight: 500;
+    }
+
+    @include onTablet {
+      font-size: $f-size-22;
+
+      &::after {
+        font-size: $f-size-12;
+      }
+    }
+
+    @include onMobile {
+      font-size: $f-size-16;
+
+      &::after {
+        margin-left: 3px;
+        font-size: $f-size-8;
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: 18px;
+    @include font-style(
+      $font-pier__sans-black,
+      $f-size-90,
+      900,
+      108px,
+      $c-white,
+    );
+
+    @include onDesktop {
+      font-size: $f-size-50;
+      line-height: 70px;
+    }
+
+    @include onTablet {
+      font-size: $f-size-36;
+      line-height: 50px;
+    }
+
+    @include onMobile {
+      width: 50%;
+      font-size: $f-size-30;
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: 110px;
+    @include font-style(
+      $font-avenir,
+      $f-size-18,
+      500,
+      25px,
+      $c-white,
+    );
+
+    @include onLaptop-L {
+      margin-bottom: 80px;
+    }
+
+    @include onTablet {
+      font-size: $f-size-14;
+      line-height: 20px;
+    }
+  }
+
+  &__feedback {
+    display: flex;
+    column-gap: 75px;
+    margin-bottom: 45px;
+
+    @include onTablet {
+      column-gap: 35px;
+    }
+  }
+
+  &__count-title {
+    margin-bottom: 8px;
+    @include font-style(
+      $font-pier__sans-black,
+      $f-size-30,
+      900,
+      normal,
+      $c-white,
+    );
+
+    @include onTablet {
+      font-size: $f-size-22;
+    }
+  }
+
+  &__count-subtitle {
+    max-width: 75px;
+    @include font-style(
+      $font-avenir,
+      $f-size-18,
+      500,
+      25px,
+      $c-white,
+    );
+
+    @include onTablet {
+      font-size: $f-size-14;
+      line-height: 20px;
+    }
+  }
+
+  &__form {
+    max-width: 450px;
+    @include onDesktop {
+      max-width: 370px;
+    }
+
+    @include onLaptop-L {
+      margin-top: 35px;
+      width: 350px;
+    }
+
+    @include onLaptop-s {
+      margin-top: 35px;
+      max-width: 30%;
+    }
+
+    @include onTablet {
+      margin-top: 0;
+      height: max-content;
+    }
+
+    @include onMobile {
+      margin: 0 auto 40px;
+      max-width: 100%;
+    }
+  }
+}

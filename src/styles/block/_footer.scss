@@ -1,0 +1,130 @@
+.footer {
+  position: relative;
+
+  &__content {
+    position: absolute;
+    left: 40px;
+    right: 40px;
+    background-color: $c-blue;
+
+    @include onMobile {
+      left: 0;
+      right: 0;
+    }
+  }
+
+  &__bg {
+    top: -500px;
+    width: 100%;
+    height: 2000px;
+    position: absolute;
+    z-index: -2;
+    background: url("../images/bg-bottom.jpg") center center/cover no-repeat;
+
+    @include onLaptop-s {
+      top: -100%;
+      height: 1300px;
+      transform: translateY(5%);
+    }
+
+    @include onTablet {
+      height: 1300px;
+      transform: translateY(-5%);
+    }
+
+    @include onMobile {
+      height: 1800px;
+    }
+  }
+
+  &__navigation {
+    padding: 30px 0;
+    position: relative;
+    align-items: center;
+  }
+
+  &__contact-us {
+    margin-bottom: 500px;
+
+    @include onLaptop-s {
+      margin-bottom: 150px;
+    }
+
+    @include onMobile {
+      margin-bottom: 200px;
+    }
+
+  }
+
+  &__rights {
+    display: block;
+    padding-bottom: 33px;
+    padding-top: 34px;
+    border-top: 1px solid $c-white-transparament;
+
+    @include font-style(
+      $font-avenir,
+      $f-size-12,
+      500,
+      25px,
+      $c-white,
+    );
+
+    @include onLaptop-s {
+      text-align: center;
+    }
+  }
+
+  &__navigation .navigation__list {
+    @include onLaptop-s {
+      padding: 0 20px;
+      height: max-content;
+      align-items: center;
+      column-gap: 15%;
+      justify-content: space-around;
+      flex-direction: row;
+      flex-wrap: wrap;
+      position: static;
+      backdrop-filter: unset;
+      transform: translate(0);
+      background-color: transparent;
+    }
+
+    @include onMobile {
+      display: none;
+    }
+  }
+
+  &__navigation .navigation__social {
+    @include onLaptop-s {
+      position: static;
+      transform: translateY(50%);
+    }
+
+    @include onTablet {
+      transform: translateY(0);
+      display: flex;
+    }
+  }
+
+  &__navigation .navigation__item > * {
+    @include onLaptop-s {
+      padding: 0;
+      font-size: $f-size-14;
+    }
+  }
+
+  &__navigation .navigation__item {
+    @include onLaptop-s {
+      height: max-content;
+    }
+  }
+
+  &__navigation .navigation__icon {
+    @include onTablet {
+      &::before {
+        font-size: $f-size-45;
+      }
+    }
+  }
+}

@@ -1,0 +1,68 @@
+.page {
+  scroll-behavior: smooth;
+
+  &__body {
+    &--with-menu {
+      overflow: hidden;
+    }
+  }
+
+  &__main {
+    overflow: hidden;
+  }
+
+  &__header {
+    margin-bottom: 87px;
+  }
+
+  &__features {
+    margin-bottom: 186px;
+
+    @include onMobile {
+      margin-bottom: 70px;
+    }
+  }
+
+  &__ability {
+    margin-bottom: 256px;
+
+    @include onDesktop {
+      margin-bottom: 150px;
+    }
+  }
+
+  &__technologie {
+    margin-bottom: 163px;
+  }
+
+  &__product {
+    margin-bottom: 151px;
+  }
+
+  &__horse {
+    margin-bottom: 250px;
+
+    @include onMobile {
+      margin-bottom: 100px;
+    }
+  }
+
+  &__carousel {
+
+    @include onTablet {
+      margin-bottom: 40px;
+    }
+
+    @include onMobile {
+      margin-bottom: 100px;
+    }
+  }
+
+  &__certificate {
+    margin-bottom: 285px;
+
+    @include onTablet {
+      margin-bottom: 120px;
+    }
+  }
+}

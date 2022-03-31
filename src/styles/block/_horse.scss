@@ -1,0 +1,126 @@
+.horse {
+  position: relative;
+  width: 100%;
+
+  &__img {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__plus {
+    cursor: pointer;
+    position: relative;
+    z-index: 3;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: $c-blue;
+
+    @extend %plus-icon;
+
+    @include onMobile {
+      width: 20px;
+      height: 20px;
+
+      &::before {
+        font-size: $f-size-22;
+      }
+    }
+  }
+
+  &__circle {
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    background: $c-grey-form;
+    backdrop-filter: blur(19px);
+    border-radius: 50%;
+    z-index: 1;
+    transition: opacity ease 0.5s;
+
+    @include onMobile {
+      width: 25px;
+      height: 25px;
+    }
+  }
+
+  &__description {
+    position: absolute;
+    border-radius: 5px;
+    padding: 5px;
+    width: 165px;
+    top: 110px;
+    right: 10px;
+
+    &::before {
+      position: absolute;
+      left: 70px;
+      top: -30px;
+      content: "";
+      width: 80px;
+      transform: rotate(-45deg);
+      border-bottom: 3px dotted $c-blue;
+    }
+
+    @include font-style(
+      $font-pier__sans-black,
+      $f-size-16,
+      900,
+      19px,
+      $c-blue,
+    );
+
+    opacity: 0;
+
+    @include onMobile {
+      max-width: 70px;
+      font-size: $f-size-12;
+      line-height: 15px;
+      top: 100%;
+
+      &::before {
+        display: none;
+      }
+    }
+  }
+
+  &__neck {
+    @include position (34%, 32%);
+  }
+
+  &__shoulder {
+    @include position (44%, 37%);
+  }
+
+  &__back {
+    @include position (34%, 50%);
+  }
+
+  &__reins {
+    @include position (34%, 60%);
+  }
+
+  &__leg {
+    @include position (50%, 65%);
+  }
+
+  &__foot-bone {
+    @include position (71%, 68%);
+  }
+
+  &__hoof {
+    @include position (76%, 79%);
+  }
+
+  &__joint {
+    @include position (72%, 41%);
+  }
+
+  &__wrist {
+    @include position (69%, 33%);
+  }
+}

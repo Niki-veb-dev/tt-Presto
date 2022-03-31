@@ -1,0 +1,316 @@
+.features {
+  position: relative;
+  padding-top: 70px;
+
+  @include onMobile {
+    padding-top: 35px;
+  }
+
+  &__points > * {
+    &:last-child {
+      bottom: 20%;
+      right: -16%;
+    }
+
+    &:first-child {
+      top: 5%;
+      left: -16%;
+    }
+
+    @include onTablet {
+      &:last-child {
+        bottom: -25%;
+        right: -3%;
+      }
+
+      &:first-child {
+        top: 5%;
+        left: -3%;
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  &__subtitle {
+    margin-bottom: 61px;
+
+    @include onMobile {
+      margin-bottom: 25px;
+    }
+  }
+
+  &__info {
+    @extend %flex-space-between;
+    margin-bottom: 27px;
+
+    @include onLaptop-s {
+      margin-bottom: 100px;
+    }
+
+    @include onMobile {
+      flex-direction: column;
+    }
+  }
+
+  &__about-product {
+    @extend %flex-column;
+    width: 465px;
+    margin-right: 90px;
+    row-gap: 28px;
+
+    @include onLaptop-L {
+      margin: 0;
+    }
+
+    @include onLaptop-s {
+      max-width: 350px;
+    }
+
+    @include onTablet {
+      max-width: 300px;
+      margin-left: 40px;
+    }
+
+    @include onMobile {
+      margin: 0 auto;
+      width: 100%;
+    }
+  }
+
+  &__text {
+    @include font-style(
+      $font-avenir,
+      $f-size-16,
+      900,
+      27px,
+      $c-black,
+    );
+
+    @include onTablet {
+      font-size: $f-size-12;
+      line-height: 23px;
+    }
+  }
+
+  &__eye {
+    cursor: pointer;
+    position: absolute;
+    left: -144%;
+    top: 50%;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background-color: $c-white;
+
+    &::before {
+      content: "\e907";
+      position: absolute;
+      cursor: pointer;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      font-size: $f-size-30;
+      font-family: $font-logo;
+      color: $c-blue;
+      z-index: 2;
+      transition: all ease 0.3s;
+    }
+
+    &:hover {
+      transition: all ease 0.3s;
+      &::before {
+        color: $c-white;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        width: 40px;
+        z-index: 1;
+        height: 40px;
+        background-color: $c-blue;
+      }
+    }
+
+    @include onTablet {
+      width: 25px;
+      height: 25px;
+
+      transform: translate(70%);
+
+      &::before {
+        font-size: $f-size-18;
+      }
+
+      &:hover:after {
+        width: 22px;
+        height: 22px;
+      }
+    }
+
+    @include onMobile {
+      transform: translate(0);
+
+      width: 20px;
+      height: 20px;
+
+      &::before {
+        font-size: $f-size-16;
+      }
+
+      &:hover:after {
+        width: 18px;
+        height: 18px;
+      }
+    }
+  }
+
+  &__lasso {
+    @include position(45%, 18%);
+    @include onMobile {
+      left: 45%;
+      top: 25%;
+    }
+  }
+
+  &__touchpad {
+    @include position(20%, 13%);
+    @include onMobile {
+      left: 43%;
+      top: 10%;
+    }
+  }
+
+  &__box {
+    @include position(75%, 25%);
+    @include onMobile {
+      left: 54%;
+      top: 40%;
+    }
+  }
+
+  &__img {
+    width: 40%;
+
+    @include onLaptop-s {
+      width: 50%;
+      height: 50%;
+    }
+
+    @include onMobile {
+      width: 300px;
+      margin: 0 auto;
+    }
+  }
+
+  &__main {
+    position: relative;
+    @extend %flex-space-between;
+
+    @include onMobile {
+      flex-direction: column;
+      height: max-content;
+    }
+  }
+
+  &__description {
+    @extend %flex-column;
+    padding: 218px 97px 60px;
+    position: relative;
+    display: none;
+    width: 397px;
+    height: 470px;
+
+    margin-top: 61px;
+    margin-right: 90px;
+
+    background: $c-blue-transparament;
+    transition: all ease 0.5s;
+    border-radius: 10px;
+
+    &--active {
+      display: block;
+      right: 0;
+    }
+
+    @include onLaptop-L {
+      margin: 60px 70px 0 0;
+    }
+
+    @include onLaptop-s {
+      width: 350px;
+      padding: 200px 30px 0;
+      margin: 0;
+    }
+
+    @include onTablet {
+      padding: 130px 30px 10px;
+      width: 250px;
+      height: 320px;
+    }
+
+    @include onMobile {
+      width: 260px;
+      margin: 0 auto;
+    }
+  }
+
+  &__attribute {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 80%;
+  }
+
+  &__attribute-img {
+    width: 100%;
+  }
+
+  &__product--title {
+    text-align: center;
+    margin-bottom: 24px;
+  }
+
+  &__product--description {
+    margin-bottom: 27px;
+    text-align: center;
+
+    @include font-style(
+      $font-avenir,
+      $f-size-16,
+      600,
+      22px,
+      $c-black,
+    );
+
+    @include onTablet {
+      font-size: $f-size-12;
+      line-height: 18px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__product--size {
+    display: flex;
+    justify-content: center;
+
+    @include font-style(
+      $font-pier__sans-italic,
+      $f-size-16,
+      500,
+      22px,
+      $c-black,
+    );
+
+    @include onTablet {
+      font-size: $f-size-12;
+    }
+  }
+}

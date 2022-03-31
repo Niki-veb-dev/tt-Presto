@@ -1,4 +1,62 @@
-%h1 {
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
+%h2 {
+  font-family: $font-pier__sans-black;
+  font-weight: 900;
+  font-size: $f-size-70;
+  color: $c-blue;
+
+  @include onTablet {
+    font-size: $f-size-50;
+  }
+
+  @include onMobile {
+    font-size: $f-size-26;
+  }
+}
+
+%h3 {
+  font-family: $font-pier__sans-black;
+  font-size: $f-size-22;
+  font-weight: 900;
+  line-height: 27px;
+  color: $c-blue;
+
+  @include onTablet {
+    font-size: $f-size-18;
+    line-height: 22px;
+  }
+
+  @include onMobile {
+    font-size: $f-size-16;
+  }
+}
+
+%h4 {
+  font-family: $font-pier__sans-black;
+  font-size: $f-size-16;
+  font-weight: 900;
+  line-height: 19px;
+  color: $c-blue;
+}
+
+%flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+%flex-space-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+%plus-icon {
+  &::before {
+    content: "+";
+    position: absolute;
+    font-family: $font-pier__sans-bold;
+    font-size: 32px;
+    color: $c-white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-48%, -65%);
+  }
 }

@@ -1,0 +1,160 @@
+.product {
+  &__img {
+    width: 100%;
+  }
+
+  &__title {
+    margin-bottom: 30px;
+  }
+
+  &__content {
+    position: relative;
+  }
+
+  &__image {
+    width: 100%;
+
+    @include onTablet {
+      padding-top: 100px;
+    }
+  }
+
+  &__points {
+    top: -2%;
+    right: -5%;
+  }
+
+  &__content > * .grid__item {
+    &:nth-child(3) {
+      padding-top: 125px;
+
+      @include onLaptop-s {
+        padding-top: 0;
+      }
+    }
+  }
+
+  &__order {
+    @include onMobile {
+      order: 1;
+    }
+  }
+
+  &__description {
+    position: relative;
+    padding-top: 124px;
+
+    @include onTablet {
+      padding-top: 0;
+    }
+
+    &--pro {
+      @include circle(25%, -75%);
+      @include line(26.5%, -72%, 350px);
+
+      @include onDesktop {
+        @include circle(25.5%, -69%);
+        @include line(27%, -65%, 250px);
+      }
+
+      @include onLaptop-L {
+        @include circle(25%, -56%);
+        @include line(26.5%, -52%, 200px);
+      }
+
+      @include onLaptop-s {
+        &::before,
+        &::after {
+          display: none;
+        }
+      }
+
+      @include onTablet {
+        padding-top: 0;
+
+        &::before,
+        &::after {
+          display: none;
+        }
+      }
+    }
+
+    &--mobile {
+      @include circle(25%, 121%);
+      @include line(26.5%, 58.5%, 320px);
+
+      @include onDesktop {
+        @include circle(25%, 122%);
+        @include line(26.5%, 72.5%, 200px);
+      }
+
+      @include onLaptop-L {
+        @include circle(25%, 122%);
+        @include line(26.5%, 72.5%, 200px);
+      }
+
+      @include onLaptop-s {
+        &::before,
+        &::after {
+          display: none;
+        }
+      }
+
+      @include onTablet {
+        &::before,
+        &::after {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__name {
+    margin-bottom: 39px;
+
+    @include font-style(
+      $font-pier__sans-black,
+      $f-size-30,
+      900,
+      normal,
+      $c-blue,
+    );
+  }
+
+  &__list {
+    padding-left: 18px;
+    margin-bottom: 55px;
+    display: flex;
+    list-style: disc;
+    flex-direction: column;
+    text-transform: lowercase;
+    row-gap: 10px;
+  }
+
+  &__text {
+    @include font-style(
+      $font-avenir,
+      $f-size-18,
+      900,
+      normal,
+      $c-black,
+    );
+  }
+
+  &__button {
+    text-transform: uppercase;
+    background-color: $c-blue;
+    border-radius: 5px;
+    border: none;
+    width: 178px;
+    height: 44px;
+
+    @include font-style(
+      $font-pier__sans-black,
+      $f-size-14,
+      700,
+      normal,
+      $c-white,
+    );
+  }
+}

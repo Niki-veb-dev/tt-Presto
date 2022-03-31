@@ -1,0 +1,32 @@
+.container {
+  margin: 0 auto;
+  width: 1440px;
+
+  @include onDesktop {
+    width: 1200px;
+  }
+
+  @include onLaptop-L {
+    width: 90%;
+  }
+
+  &--medium {
+    width: 1220;
+
+    @include onDesktop {
+      width: 1140px;
+    }
+
+    @include onLaptop-s {
+      width: 90%;
+    }
+
+    @include onTablet {
+      width: 568px;
+    }
+
+    @include onMobile {
+      width: 90%;
+    }
+  }
+}

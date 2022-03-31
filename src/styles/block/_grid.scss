@@ -1,0 +1,20 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(14, 1fr);
+  column-gap: 5px;
+
+  @include onMobile {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item {
+    @for $start from 1 through 14 {
+      @for $end from $start through 14 {
+        &--#{$start}-#{$end} {
+          grid-column: #{$start} / #{$end + 1};
+        }
+      }
+    }
+  }
+}

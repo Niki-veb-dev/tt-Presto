@@ -4,3 +4,82 @@
     #{$_property}: $_toValue;
   }
 }
+
+@mixin font-style(
+  $_font,
+  $_f-size,
+  $_f-weight,
+  $_l-height,
+  $_color
+) {
+  font-family: $_font, sans-serif;
+  font-size: $_f-size;
+  font-weight: $_f-weight;
+  line-height: $_l-height;
+  color: $_color;
+}
+
+@mixin position($_top, $_left) {
+  position: absolute;
+  top: $_top;
+  left: $_left;
+
+  &:hover > * {
+    opacity: 1;
+  }
+}
+
+@mixin circle($_top, $_left) {
+  &::before {
+    content: "";
+    position: absolute;
+    top: $_top;
+    left: $_left;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 1px solid $c-black;
+  }
+}
+
+@mixin line($_top, $_left, $_width) {
+  &::after {
+    content: "";
+    position: absolute;
+    top: $_top;
+    left: $_left;
+    width: $_width;
+    height: 1px;
+    background-color: $c-black;
+  }
+}
+
+@mixin onDesktop {
+  @media (max-width: 1600px) {
+    @content;
+  }
+}
+
+@mixin onLaptop-L {
+  @media (max-width: 1439px) {
+    @content;
+  }
+}
+
+@mixin onLaptop-s {
+  @media (max-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin onTablet {
+  @media (max-width: 1023px) {
+    @content;
+  }
+}
+
+@mixin onMobile {
+  @media (max-width: 767px) {
+    @content;
+  }
+}

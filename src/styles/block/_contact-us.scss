@@ -1,0 +1,35 @@
+.contact-us {
+
+  &__title {
+    padding-top: 117px;
+    margin-bottom: 29px;
+
+    @include onLaptop-s {
+      padding-top: 0;
+    }
+  }
+
+  &__subtitle {
+    @include onMobile {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__form {
+    margin-left: 56px;
+    background-color: $c-blue-transparament;
+
+    @include onLaptop-s {
+      margin: 0;
+    }
+
+    @include onTablet {
+      margin: 0;
+    }
+
+    @include onMobile {
+      margin: 0 auto;
+      width: 90%;
+    }
+  }
+}
